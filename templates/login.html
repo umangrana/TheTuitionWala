@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+ <link rel="shortcut icon" href="{% static 'images/book.ico' %}" type="image/x-icon" >
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}">
+<title> Login form </title>
+
+<!-- <script type="text/javascript">
+	function validateForm(){
+		var x = document.forms["myForm"]["fname"].value;
+		var y = document.forms["myForm"]["password"].value;
+		if (x == "" || y == "") {
+			alert("enter Username and password");
+			return false;
+		}
+	}
+</script> -->
+
+ <body>
+
+<img src="{% static 'uploads/logo.png' %}" class="logo">
+<div class="loginbox">
+<h1>Login Here</h1>
+<form action = "{% url 'TuitionWala:user_login' %}" method="POST">
+	{% for message in messages %}
+						<div class="alert alert-danger">
+							<a class="close" href="#" data-dismiss="alert" aria-label="close"><font color="red" size="4px"><b>{{ message }}</b></font></a>
+
+						</div>
+				{% endfor %}
+	{% csrf_token %}
+
+	<br>
+
+	<p>Username</p>
+	<input type="text" name="username"  placeholder="Enter Username" id="username" required>
+	<p>Password</p>
+	<input type="Password" name="password"  placeholder="Enter Password" id="password" required>
+	<br>
+	<input type="submit" name="submit" value="Login"><br>
+
+	<!-- <a href="forgotpass.html">Forgot password?</a><br> -->
+
+	<a href="http://127.0.0.1:8000/index/register">Don't have an account?</a>
+</form>
+</div>
+
+</body>
+</head>
+</html>

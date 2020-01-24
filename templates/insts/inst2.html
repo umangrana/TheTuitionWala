@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+     <!-- Site Metas -->
+    <title>TuitionWala</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+
+    <link rel="shortcut icon" href="{% static 'images/book.ico' %}" type="image/x-icon" >
+    <link rel="apple-touch-icon" href="{% static 'images/book1.png' %}" type="image" >
+
+
+    <link rel="shortcut icon" href="images/book.ico" type="image/x-icon" />
+    <meta charset="utf-8">
+    <title>TutionWala</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav id="navmain" class="navbar navbar-expand-lg navbar-light" style="background-color: #e6e6e6;">
+      <a class="navbar-brand" href="#"></a>
+            <img src="{% static 'uploads/logonavbar.png' %}">
+      </a>
+<!-- Brand and toggle get grouped for better mobile display -->
+<!-- This is the actual code that creates the "hamburger icon" -->
+<!-- The data-target grabs ids to put into the icon -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="navbar-nav">
+
+          <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
+         <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/main_page">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="http://127.0.0.1:8000/index/partner_institutions">Partner Institutions</a>
+          <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/Entity_Registration_Form">Register(Institute/Tutor)</a>
+          <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/enrollment_console">Click To Enroll</a>
+          <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/status">Enrollment Status</a>
+              </div>
+
+
+              </div>
+
+              </div>
+                          </div> <!-- /.navbar-nav, left-hand content -->
+        <!-- STUFF ON THE RIGHT -->
+<form class="logout" action="http://127.0.0.1:8000/index">
+              <div class="navbar-nav ml-auto">
+              {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a class="nav-item nav-link" href="{% url 'TuitionWala:user_login' %}">Login</a>
+            {% endif %}
+            </div> <!-- /.navbar-nav, right-hand content -->
+
+            </div> <!-- /.navbarcollapse -->
+  </form>
+</nav>
+    <div class="jumbotron">
+    <div class="card card-body">
+
+    <h2>Raga Tution</h2>
+      <b><center><img id="inst2" src="{% static 'images/inst2.png' %}" alt=""></center></b>
+      <p></p>
+      <p><b>Ragatuitions</b> is an online portal which connects parents/students and private tutors in Hyderabad and Secunderabad on a common platform, wherein they can discover/search each other with ease. The students and home tutors can also request call back and our customer support team can get them registered for free. Alternatively, users register on their own via our website. Students as well as tuition teachers in Hyderabad can look for each other directly through our website and contacting each other through call/SMS or email. Ours is a very unique business model - as soon as a new parent/student registers, the relevant details like subject, class, contact number as well as location will be sent by SMS and e-mail to all the relevant home tutors in Hyderabad, which match the requirements. Then the home tuition teachers can contact the student on the provided number to discuss further. The students can then ask for a demo class from tutors, and if its deemed satisfactory, the student and tutor can finalise things like tuition fees, timings, frequency of classes and the other terms directly. We have a huge database of students and tutors. Students as well as home tuition teachers in Secunderabad and Hyderabad can search this database of ours and find each other by contacting each other via our website. The contact numbers are also provided which can be used to contact each other directly.
+      <ul>
+      <p><b><u>Contact Us:-</u></b></p>
+      <li><b><u>ADDRESS:-</b></u> D.no #8-3-319/8/4,
+      S9,Block 3,Sri Nilayam,
+      Near Sarathi Studio,
+      Ameerpet
+      Hyderabad - 500073
+      India</li>
+      </ul>
+      </p>
+      <p></p>
+      <p></p>
+      <p align=right><a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/index/partner_institutions" role="button">Go Back</a></p>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

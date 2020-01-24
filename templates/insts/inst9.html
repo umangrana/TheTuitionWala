@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+     <!-- Site Metas -->
+    <title>TuitionWala</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+
+    <link rel="shortcut icon" href="{% static 'images/book.ico' %}" type="image/x-icon" >
+    <link rel="apple-touch-icon" href="{% static 'images/book1.png' %}" type="image" >
+
+
+    <link rel="shortcut icon" href="images/book.ico" type="image/x-icon" />
+    <meta charset="utf-8">
+    <title>TutionWala</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav id="navmain" class="navbar navbar-expand-lg navbar-light" style="background-color: #e6e6e6;">
+      <a class="navbar-brand" href="#"></a>
+            <img src="{% static 'uploads/logonavbar.png' %}">
+      </a>
+<!-- Brand and toggle get grouped for better mobile display -->
+<!-- This is the actual code that creates the "hamburger icon" -->
+<!-- The data-target grabs ids to put into the icon -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="navbar-nav">
+
+          <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
+         <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/main_page">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="http://127.0.0.1:8000/index/partner_institutions">Partner Institutions</a>
+          <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/Entity_Registration_Form">Register(Institute/Tutor)</a>
+          <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/enrollment_console">Click To Enroll</a>
+          <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/status">Enrollment Status</a>
+              </div>
+
+
+              </div>
+
+              </div>
+                          </div> <!-- /.navbar-nav, left-hand content -->
+        <!-- STUFF ON THE RIGHT -->
+<form class="logout" action="http://127.0.0.1:8000/index">
+              <div class="navbar-nav ml-auto">
+              {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a class="nav-item nav-link" href="{% url 'TuitionWala:user_login' %}">Login</a>
+            {% endif %}
+            </div> <!-- /.navbar-nav, right-hand content -->
+
+            </div> <!-- /.navbar-collapse -->
+  </form>
+</nav>
+    <div class="jumbotron">
+    <div class="card card-body">
+      <h2>The PRISM Institute</h2>
+        <b><center><img id="inst9"src="{% static 'images/inst9.png' %}" alt="" width=200px height=100px></center></b>
+        <p></p>
+         <b><u>The PRISM Institute</u></b> Established in the year 2008, Prism Forum For IIT JEE & Medical in Dilsukhnagar, Hyderabad is a top player in the category Tutorials in the Hyderabad. This well-known establishment acts as a one-stop destination servicing customers both local and from other parts of Hyderabad. Over the course of its journey, this business has established a firm foothold in it’s industry. The belief that customer satisfaction is as important as their products and services, have helped this establishment garner a vast base of customers, which continues to grow by the day. This business employs individuals that are dedicated towards their respective roles and put in a lot of effort to achieve the common vision and larger goals of the company. In the near future, this business aims to expand its line of products and services and cater to a larger client base. In Hyderabad, this establishment occupies a prominent location in Dilsukhnagar.
+      <ul>
+        <p><b><u>Contact Us:-</u></b></p>
+            <li><b><u>Mobile No:-</u></b>9152880093</li>
+            <p></p>
+            <li><b><u>ADDRESS:-</u></b>16-11-477/6/1/A/7, Main Road, Beside Sahadeva Reddy Sweets, 1st Building In Shashi Hospital Lane, Dilsukhnagar, Hyderabad - 500060, Near Metro Rail Pillar No MSBNP 32&33, Above Andra Bank & SBI ATM.</li>
+      </ul>
+      </p>
+      <p></p>
+      <p></p>
+      <p align=right><a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/index/partner_institutions" role="button">Go Back</a></p>
+      </div>
+    </div>
+  </body>
+</html>

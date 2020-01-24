@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+     <!-- Site Metas -->
+    <title>TuitionWala</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+
+    <link rel="shortcut icon" href="{% static 'images/book.ico' %}" type="image/x-icon" >
+    <link rel="apple-touch-icon" href="{% static 'images/book1.png' %}" type="image" >
+
+
+    <link rel="shortcut icon" href="images/book.ico" type="image/x-icon" />
+    <meta charset="utf-8">
+    <title>TutionWala</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav id="navmain" class="navbar navbar-expand-lg navbar-light" style="background-color: #e6e6e6;">
+      <a class="navbar-brand" href="#"></a>
+            <img src="{% static 'uploads/logonavbar.png' %}">
+      </a>
+<!-- Brand and toggle get grouped for better mobile display -->
+<!-- This is the actual code that creates the "hamburger icon" -->
+<!-- The data-target grabs ids to put into the icon -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="navbar-nav">
+
+          <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
+         <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/main_page">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="http://127.0.0.1:8000/index/partner_institutions">Partner Institutions</a>
+          <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/Entity_Registration_Form">Register(Institute/Tutor)</a>
+          <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/enrollment_console">Click To Enroll</a>
+          <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/status">Enrollment Status</a>
+              </div>
+
+
+              </div>
+
+              </div>
+                          </div> <!-- /.navbar-nav, left-hand content -->
+        <!-- STUFF ON THE RIGHT -->
+<form class="logout" action="http://127.0.0.1:8000/index">
+              <div class="navbar-nav ml-auto">
+              {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a class="nav-item nav-link" href="{% url 'TuitionWala:user_login' %}">Login</a>
+            {% endif %}
+            </div> <!-- /.navbar-nav, right-hand content -->
+
+            </div> <!-- /.navbar-collapse -->
+  </form>
+</nav>
+    <div class="jumbotron">
+    <div class="card card-body">
+      <h2> Vivekananda foundation</h2>
+        <b><center><img id="inst1" src="{% static 'images/inst1.png' %}" alt="" width=200px height=100px></center></b>
+        <p></p>
+          <p> <b>Vivekananda foundation</b> was established with the specific aim of making people  learn how to use the language correctly and effectively. This foundation has come up with  excellence of course with twenty years of research in global language. It has offered a unique  way of teaching the language in a simple and  <br>suitable way to the different categories of learners such  as students, employees, professionals, executives, business men and housewives.
+      We Provide Tailor-Made Language Courses Online For Companies, Individuals, Small Groups And Job  Seekers. Learn Languages In A Small Group Course With Students, Employees, Professionals, Executives, Business Men And Housewives And The Ambitious.
+      <ul>
+        <p><b><u>Contact Us:-</u></b></p>
+        <li>Email us : info@vivekanandafoundation.com</li>
+      <li>Call us on:+91 9121002737, 9121002397</li>
+      <li>ADDRESS:-</li>
+      H.O: KPHB (Kuktapally)
+      Flat No: 401, Padmaja's Raja Enclave, Beside KS Bakers, KPHB, Hyderabad - 72
+      B.O: Ameerpet
+      Flat No: 401, Prashanthi Ram Towers, Near Sarathi Studio, Yousuyguda Road, Hyderabad - 45
+      B.O Mehdipatnam
+      Flat No: 404, 4th Floor, Sakina Complex, Mehdipatnam X Road, Hyderabad - 28
+      </ul>
+      </p>
+      <p></p>
+      <p></p>
+      <p align=right><a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/index/partner_institutions" role="button">Go Back</a></p>
+      </div>
+    </div>
+  </body>
+</html>

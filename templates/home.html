@@ -7,7 +7,7 @@
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
 {% else %}
-  <p>You are not logged in</p>
+  <p>You are not logged in, umang</p>
   <a href="{% url 'login' %}">login</a>
 {% endif %}
 {% endblock %}

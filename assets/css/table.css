@@ -1,0 +1,29 @@
+body{
+  background:url(tablebg.jpg);
+  background-size: cover;
+}
+
+.jumbotron{
+  opacity: .7;
+   filter: alpha(opacity=70)
+   font-weight: bolder;
+   height: 500px;
+   align-content: center;
+   align-items: center;
+   text-align: center;
+
+}
+
+.tuition{
+padding-top: 60px;
+
+}
+.navmain{
+opacity: 0.8;
+  filter: alpha(opacity=80);
+
+}
+h1{
+  padding-bottom: 30px;
+  font-weight: bolder;
+}

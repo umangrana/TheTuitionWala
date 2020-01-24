@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+     <!-- Site Metas -->
+    <title>TuitionWala</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+
+    <link rel="shortcut icon" href="{% static 'images/book.ico' %}" type="image/x-icon" >
+    <link rel="apple-touch-icon" href="{% static 'images/book1.png' %}" type="image" >
+
+
+    <link rel="shortcut icon" href="images/book.ico" type="image/x-icon" />
+    <meta charset="utf-8">
+    <title>TutionWala</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static 'css/background_partner.css' %}">
+  </head>
+  <body>
+    <nav id="navmain" class="navbar navbar-expand-lg navbar-dark" style="background-color: #868885;">
+      <a class="navbar-brand" href="#"></a>
+            <img src="{% static 'uploads/logonavbar.png' %}">
+      </a>
+<!-- Brand and toggle get grouped for better mobile display -->
+<!-- This is the actual code that creates the "hamburger icon" -->
+<!-- The data-target grabs ids to put into the icon -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="navbar-nav">
+
+          <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
+         <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/main_page">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="http://127.0.0.1:8000/index/partner_institutions">Partner Institutions</a>
+          <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/Entity_Registration_Form">Register(Institute/Tutor)</a>
+          <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/enrollment_console">Click To Enroll</a>
+          <a class="nav-item nav-link" href="http://127.0.0.1:8000/index/status">Enrollment Status</a>
+              </div>
+
+
+              </div>
+
+              </div>
+                          </div> <!-- /.navbar-nav, left-hand content -->
+        <!-- STUFF ON THE RIGHT -->
+<form class="logout" action="http://127.0.0.1:8000/index">
+              <div class="navbar-nav ml-auto">
+              {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a class="nav-item nav-link" href="{% url 'TuitionWala:user_login' %}">Login</a>
+            {% endif %}
+            </div> <!-- /.navbar-nav, right-hand content -->
+
+            </div> <!-- /.navbar-collapse -->
+  </form>
+</nav>
+<br>
+<br>
+
+
+<div class="card-column">
+<div class="card-group">
+
+  <p></p>
+  <br>
+<form class="" action="http://127.0.0.1:8000/index/inst1" method="post">
+  {% csrf_token %}
+  <div class="container">
+      <div class="card border-dark mb-6"   >
+        <h5 class="card-header"><img src="{% static 'images/inst1.png' %}" alt="Jane" height=60px ><br>Vivekananda Institution</h5>
+          <div class="card-body">
+            <p class="title">
+              Learn Languages In A Small Group Course With Students, Employees,  Professionals, Executives,<br> Business Men  And Housewives And The Ambitious.
+            </p>
+            <p align="right">
+                <right><input class="btn btn-primary" type="submit" name="sumit" value="Learn more"></right>
+              </p>
+        </div>
+      </div>
+    </div>
+</form>
+<p></p>
+<br>
+<form class="" action="http://127.0.0.1:8000/index/inst2" method="post">
+  {% csrf_token %}
+  <div class="container">
+      <div class="card border-dark mb-6"   >
+        <h5 class="card-header"><img id="inst1" src="{% static 'images/inst2.png' %}" alt="" width=100px height=60px><br>Raga Tuitions</h5>
+          <div class="card-body">
+            <p class="title">
+              The students and home tutors can also request call back and our customer support team can <br> get them registered for free.
+            </p>
+            <p align="right">
+                <right><input class="btn btn-primary" type="submit" name="sumit" value="Learn more"></right>
+              </p>
+        </div>
+      </div>
+    </div>
+</form>
+
+
+</div>
+
+<br>
+
+<div class="card-group">
+<form class="" action="http://127.0.0.1:8000/index/inst3" method="post">
+  {% csrf_token %}
+  <div class="container">
+      <div class="card border-dark mb-6"   >
+        <h5 class="card-header"><img src="{% static 'images/inst3.png' %}" alt="Jane" width=100px height=60px ><br>Brilliant Academy</h5>
+          <div class="card-body">
+            <p class="title">
+              We helped 1500 students, who had supplies ranging from 10 subjects to 30 subjects..... Brilliant
+            </p>
+            <p align="right">
+                <right><input class="btn btn-primary" type="submit" name="sumit" value="Learn more"></right>
+              </p>
+        </div>
+      </div>
+    </div>
+</form>
+<br>
+<form class="" action="http://127.0.0.1:8000/index/inst4" method="post">
+ {% csrf_token %}
+  <div class="container">
+      <div class="card border-dark mb-6"   >
+        <h5 class="card-header"><img src="{% static 'images/inst4.png' %}" alt="Jane" width=100px height=60px ><br>Melhor Institution</h5>
+          <div class="card-body">
+            <p class="title">
+              We offer intensive one to one language courses in the homes of trainers around the India.
+            </p>
+            <p align="right">
+                <right><input class="btn btn-primary" type="submit" name="sumit" value="Learn more"></right>
+              </p>
+        </div>
+      </div>
+    </div>
+</form>
+</div>
+
+<br>
+
+<div class="card-group">
+<form class="" action="http://127.0.0.1:8000/index/inst5" method="post">
+ {% csrf_token %}
+  <div class="container">
+      <div class="card border-dark mb-6" >
+        <h5 class="card-header"><img src="{% static 'images/inst5.png' %}" alt="Jane" width=100px height=60px ><br>Prasads Educational Institution</h5>
+          <div class="card-body">
+            <p class="title">
+              The institute provides a wide variety of career,professional,short term and certification courses,<br>designed by our expert academicians after careful market study and research.
+            </p>
+            <p align="right">
+                <right><input class="btn btn-primary" type="submit" name="sumit" value="Learn more"></right>
+              </p>
+        </div>
+      </div>
+    </div>
+</form>
+<br>
+<form class="" action="http://127.0.0.1:8000/index/inst6" method="post">
+ {% csrf_token %}
+      <div class="card border-dark mb-6"   >
+        <h5 class="card-header"><img src="{% static 'images/inst6.png' %}" alt="Jane" width=100px height=60px ><br>Teaching Fish</h5>
+          <div class="card-body">
+            <p class="title">
+              TF Hyderabad is 8 years old today and without doubt is the No1 brand in spoken English in <br> city.
+            </p>
+            <p align="right">
+                <right><input class="btn btn-primary" type="submit" name="sumit" value="Learn more"></right>
+              </p>
+        </div>
+      </div>
+    </div>
+</form>
+</div>
+<br>
+<div class="card-group">
+<form class="" action="http://127.0.0.1:8000/index/inst7" method="post">
+ {% csrf_token %}
+    <div class="container">
+        <div class="card border-dark mb-6"   >
+          <h5 class="card-header"><img src="{% static 'images/inst7.png' %}" alt="Jane" width=100px height=60px ><br>Srinivasa Coaching Center</h5>
+          <p></p>
+            <div class="card-body">
+              <p class="title">
+                Coaching for intermediate eamcet entrance, 10th class , foundation of IIT, VedicMaths, Schools.
+              </p>
+              <p align="right">
+                <right><input class="btn btn-primary" type="submit" name="sumit" value="Learn more"></right>
+              </p>
+          </div>
+        </div>
+      </div>
+  </form>
+
+  <form class="" action="http://127.0.0.1:8000/index/inst8" method="post">
+    {% csrf_token %}
+    <div class="container">
+        <div class="card border-dark mb-6"   >
+          <h5 class="card-header"><img src="{% static 'images/inst8.png' %}" alt="Jane" width=100px height=60px ><br>Home Tuitions</h5>
+            <div class="card-body">
+              <p class="title">
+                HomeTuitionsInHyderabad is the education service provider company.  It supplies the  qualified <br>tutors and monitors the performance of the students
+              </p>
+              <p align="right">
+                <right><input class="btn btn-primary" type="submit" name="sumit" value="Learn more"></right>
+              </p>
+          </div>
+        </div>
+      </div>
+  </form>
+</div>
+<br>
+<div class="card-group">
+  <form class="" action="http://127.0.0.1:8000/index/inst9" method="post">
+    {% csrf_token %}
+    <div class="container">
+        <div class="card border-dark mb-6"   >
+          <h5 class="card-header"><img src="{% static 'images/inst9.png' %}" alt="Jane" width=100px height=60px ><br>Prism Coaching Center</h5>
+            <div class="card-body">
+              <p class="title">
+                Prism Forum For IIT JEE & Medical in Dilsukhnagar, Hyderabad is a top player in the category <br> Tutorials in the Hyderabad.
+              </p>
+              <p align="right">
+                <right><input class="btn btn-primary" type="submit" name="sumit" value="Learn more"></right>
+              </p>
+          </div>
+        </div>
+      </div>
+  </form>
+
+  <form class="" action="http://127.0.0.1:8000/index/inst10" method="post">
+    {% csrf_token %}
+    <div class="container">
+        <div class="card border-dark mb-6"   >
+          <h5 class="card-header"><img src="{% static 'images/inst10.png' %}" alt="Jane" width=100px height=60px ><br>Hemtor Tuitions</h5>
+            <div class="card-body">
+              <p class="title">Hemtor Learning Pvt Ltd in Nallakunta, Hyderabad is a top player in the category IIT Tutorials <br>in the Hyderabad.
+              </p>
+              <p align="right">
+                <right><input class="btn btn-primary" type="submit" name="sumit" value="Learn more"></right>
+              </p>
+          </div>
+        </div>
+      </div>
+  </form>
+</div>
+<br>
+</div>
+</body>
+</html>
