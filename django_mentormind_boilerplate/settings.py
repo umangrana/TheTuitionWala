@@ -86,7 +86,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'umangrana123',
         'PORT': '3306',
-        'HOST': '127.0.0.1:8000',
+        'HOST': 'loaclhost',
     }
 }
 
